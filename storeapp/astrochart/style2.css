@@ -1,0 +1,29 @@
+rect.house {
+    stroke: #FF00FF;
+    fill: #F3EFE3;
+}
+rect.chart {
+    fill: #F3EFE3;
+}
+text.house {
+    font-family : Consolas;
+    font-weight: bold;
+    font-size: 26px;
+    fill : #4867D6;
+}
+text.title {
+    font-family: Helvetica, Arial, san-serif;
+    font-weight: 700;
+    font-size : 26px;
+    fill : #248F40;
+    text-anchor: middle;
+}
+text.retrograde {
+    fill:#04819E;
+}
+#Asc {
+    fill:#FF1E00;
+}
+#Mo {
+    fill:#A61300
+}

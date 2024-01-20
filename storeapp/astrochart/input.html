@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AstroChart Example</title>
+    <!-- Include AstroChart library -->
+    <script src="./astrochartjs/lib/snapsvg/snap.svg.js"></script>
+    <script src="./astrochartjs/dist/astrochart.js"></script>
+  </head>
+  <body>
+    <div id="astroData">
+      <label for="title">Title:</label>
+      <input type="text" id="title" placeholder="Enter title" />
+
+      <label for="startHouse">Start House Numbers From:</label>
+      <input type="number" id="startHouse" placeholder="Enter start house number" value="">
+
+      <div id="planetData">
+        <!-- Input fields for each house -->
+        <label for="house1">House 1 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="1"
+          placeholder="e.g., Su,Ke"
+        />
+
+        <label for="house2">House 2 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="2"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <label for="house3">House 3 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="3"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <label for="house4">House 4 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="4"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <label for="house5">House 5 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="5"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <label for="house6">House 6 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="6"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <label for="house7">House 7 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="7"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <label for="house8">House 8 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="8"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <label for="house9">House 9 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="9"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <label for="house10">House 10 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="10"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <label for="house11">House 11 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="11"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <label for="house12">House 12 Planets:</label>
+        <input
+          type="text"
+          class="planet-input"
+          data-house="12"
+          placeholder="e.g., Mo,Ve"
+        />
+
+        <!-- Repeat for other houses -->
+      </div>
+
+      <!-- Button to render the chart -->
+      <button id="renderButton">Render Chart</button>
+    </div>
+
+    <svg id="chart" width="600" height="400"></svg>
+
+    <script>
+      var astroChart; // Store the AstroChart instance globally
+
+      // Initialize chartData with empty arrays
+      var chartData = {
+        1: [""],
+        2: [""],
+        3: [""],
+        4: [""],
+        5: [""],
+        6: [""],
+        7: [""],
+        8: [""],
+        9: [""],
+        10: [""],
+        11: [""],
+        12: [""],
+      };
+
+      // Set up AstroChart
+      var options = {
+        width: 600,
+        height: 400,
+        styleSheet: "./style2.css",
+      };
+
+      // Function to update chart data and redraw the chart
+      function updateChart() {
+        var title = document.getElementById("title").value;
+        options.title = title;
+
+        var startHouse = document.getElementById('startHouse').value;
+            options.startHouseNumbersFrom = parseInt(startHouse);
+
+
+
+        var planetInputs = document.querySelectorAll(".planet-input");
+        planetInputs.forEach((input) => {
+          var house = input.getAttribute("data-house");
+          var planets = input.value.split(",").map((planet) => planet.trim());
+          chartData[house] = planets;
+        });
+
+        // Clear the SVG element content
+        var svgElement = document.getElementById("chart");
+        while (svgElement.firstChild) {
+          svgElement.removeChild(svgElement.firstChild);
+        }
+        options.showHouseNumbers = true;
+        // Create a new AstroChart instance and draw the chart
+        astroChart = new AstroChart("#chart", options);
+        astroChart.draw(chartData, options);
+      }
+
+      // Attach the updateChart function to the button click event
+      var renderButton = document.getElementById("renderButton");
+      renderButton.addEventListener("click", updateChart);
+    </script>
+    
+
+
+</body>
+
+
+
+</html>

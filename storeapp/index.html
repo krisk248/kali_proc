@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .angry-grid {
+        display: grid;
+
+        grid-template-rows: 60px 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 0px;
+        height: 100%;
+      }
+
+      #item-0 {
+        background-color: #000333;
+        grid-row-start: 1;
+        grid-column-start: 1;
+
+        grid-row-end: 2;
+        grid-column-end: 3;
+      }
+      #item-1 {
+        background-color: #bf7bba;
+        grid-row-start: 2;
+        grid-column-start: 1;
+
+        grid-row-end: 3;
+        grid-column-end: 3;
+      }
+      #item-2 {
+        background-color: #abcebd;
+        grid-row-start: 3;
+        grid-column-start: 1;
+
+        grid-row-end: 4;
+        grid-column-end: 3;
+      }
+      #item-3 {
+        background-color: #8b7768;
+        grid-row-start: 4;
+        grid-column-start: 2;
+
+        grid-row-end: 5;
+        grid-column-end: 3;
+      }
+      #item-4 {
+        background-color: #695b5e;
+        grid-row-start: 4;
+        grid-column-start: 1;
+
+        grid-row-end: 5;
+        grid-column-end: 2;
+      }
+      #item-5 {
+        background-color: #c7e999;
+        grid-row-start: 5;
+        grid-column-start: 1;
+
+        grid-row-end: 6;
+        grid-column-end: 2;
+      }
+      #item-6 {
+        background-color: #b799c9;
+        grid-row-start: 5;
+        grid-column-start: 2;
+
+        grid-row-end: 6;
+        grid-column-end: 3;
+      }
+      #item-7 {
+        background-color: #9bbb5b;
+        grid-row-start: 6;
+        grid-column-start: 1;
+
+        grid-row-end: 7;
+        grid-column-end: 3;
+      }
+      #item-8 {
+        background-color: #78a7de;
+        grid-row-start: 7;
+        grid-column-start: 1;
+
+        grid-row-end: 8;
+        grid-column-end: 3;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 4px solid black;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+
+    <div class="angry-grid">
+      <div id="item-0">
+        &nbsp;
+        <h1 style="text-align: center">Welcome to Astro store J</h1>
+      </div>
+      <div id="item-1">
+        &nbsp;
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" />
+
+        <label for="pob">Place of Birth:</label>
+        <input type="text" id="pob" placeholder="Enter your place of birth" />
+
+        <label for="tob">Time of Birth:</label>
+        <input type="time" id="tob" />
+      </div>
+      <div id="item-2">&nbsp;</div>
+      <div id="item-3">&nbsp; Chart 1 Input feild 
+
+
+
+      </div>
+      <div id="item-4">
+        &nbsp;
+        <table
+          style="
+            width: 573px;
+            height: 424px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+          cellpadding="1"
+        >
+          <tbody>
+            <tr>
+              <td style="width: 124.812px">&nbsp;</td>
+              <td style="width: 160.538px">&nbsp;</td>
+              <td style="width: 156.337px">&nbsp;</td>
+              <td style="width: 127.312px">&nbsp;</td>
+            </tr>
+            <tr>
+              <td style="width: 124.812px">&nbsp;</td>
+              <td style="width: 160.538px" colspan="2" rowspan="2">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+              </td>
+              <td style="width: 127.312px">&nbsp;</td>
+            </tr>
+            <tr>
+              <td style="width: 124.812px">&nbsp;</td>
+              <td style="width: 127.312px">&nbsp;</td>
+            </tr>
+            <tr>
+              <td style="width: 124.812px">&nbsp;</td>
+              <td style="width: 160.538px">&nbsp;</td>
+              <td style="width: 156.337px">&nbsp;</td>
+              <td style="width: 127.312px">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="item-5">
+        &nbsp;
+        <table
+          style="
+            width: 573px;
+            height: 424px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+          cellpadding="1"
+        >
+          <tbody>
+            <tr>
+              <td style="width: 124.812px">&nbsp;</td>
+              <td style="width: 160.538px">&nbsp;</td>
+              <td style="width: 156.337px">&nbsp;</td>
+              <td style="width: 127.312px">&nbsp;</td>
+            </tr>
+            <tr>
+              <td style="width: 124.812px">&nbsp;</td>
+              <td style="width: 160.538px" colspan="2" rowspan="2">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+              </td>
+              <td style="width: 127.312px">&nbsp;</td>
+            </tr>
+            <tr>
+              <td style="width: 124.812px">&nbsp;</td>
+              <td style="width: 127.312px">&nbsp;</td>
+            </tr>
+            <tr>
+              <td style="width: 124.812px">&nbsp;</td>
+              <td style="width: 160.538px">&nbsp;</td>
+              <td style="width: 156.337px">&nbsp;</td>
+              <td style="width: 127.312px">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="item-6">&nbsp; kjdsa;lkdsaj</div>
+      <div id="item-7">&nbsp;</div>
+      <div id="item-8">&nbsp;</div>
+    </div>
+  </body>
+</html>

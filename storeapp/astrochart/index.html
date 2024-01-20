@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./astrochartjs/lib/snapsvg/snap.svg.js"></script>
+    <script src="./astrochartjs/dist/astrochart.js"></script>
+
+    <svg id="chart" width='640' height='600'>
+    </svg>
+
+    <script>
+
+var options = {
+  title: ["உ"],
+  width: 640,
+  height: 600,
+  styleSheet: "./style2.css"
+};
+
+var chartData = { 1: ["Su"],3: ["Ju"],6: ["Ma", "Asc"], 7: ["Mo", "Sa", "Ra"], 11: ["Ve"], 12: ["Me"]};
+options.showHouseNumbers=true
+options.startHouseNumbersFrom=8
+var astroChart = new AstroChart("#chart");
+astroChart.draw(chartData, options);
+console.log(chartData)
+    </script>
+</body>
+</html>
